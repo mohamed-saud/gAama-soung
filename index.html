@@ -36,6 +36,8 @@
         <source src="media/Sm3na_com_44044.mp3" type="audio/mp3" />
       </audio>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
       var icon = document.getElementById("icon");
       var mySong = document.getElementById("mySong");
@@ -43,6 +45,14 @@
         if (mySong.paused) {
           mySong.play();
           icon.src = "./media/pause.png";
+
+          swal();
+          swal({
+            title: "صلي علي النبي محمد",
+            // text: "You clicked the button!",
+            // icon: "success",
+            button: "علي الصلاة والسلام",
+          });
         } else {
           mySong.pause();
           icon.src = "./media/play.png";
